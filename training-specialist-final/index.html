@@ -1,1 +1,53 @@
-<!-- index.html content as per project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Training Data Interactive Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI Training Data Interactive Demo</h1>
+    <p>See how AI predictions change with training data quality!</p>
+  </header>
+
+  <!-- Sentiment Analyzer -->
+  <section id="sentiment-demo">
+    <h2>Sentiment Analyzer</h2>
+    <input type="text" id="userInput" placeholder="Type a sentence...">
+    <button onclick="predictSentiment()">Check Sentiment</button>
+    <p id="result">Result will appear here</p>
+  </section>
+
+  <!-- Trainable AI -->
+  <section id="user-train">
+    <h2>Train the Sentiment AI</h2>
+    <input type="text" id="newWord" placeholder="Enter a new word">
+    <select id="wordType">
+      <option value="positive">Positive</option>
+      <option value="negative">Negative</option>
+    </select>
+    <button onclick="addWord()">Add Word</button>
+    <p id="trainFeedback"></p>
+    <p>Positive words: <span id="positiveList"></span></p>
+    <p>Negative words: <span id="negativeList"></span></p>
+  </section>
+
+  <!-- Data Quality Checker -->
+  <section id="data-quality">
+    <h2>Data Quality Checker</h2>
+    <input type="file" id="fileInput" accept=".csv">
+    <button onclick="checkDataQuality()">Analyze Dataset</button>
+    <div id="qualityResult"></div>
+  </section>
+
+  <!-- Before/After Demo -->
+  <section id="before-after">
+    <h2>Before/After Dataset Demo</h2>
+    <button onclick="runBeforeAfterDemo()">Run Demo</button>
+    <div id="beforeAfterResult"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
