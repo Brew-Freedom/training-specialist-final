@@ -33,3 +33,17 @@
   <script src="script.js"></script>
 </body>
 </html>
+<section id="image-demo">
+  <h2>Image Labeling Demo</h2>
+
+  <input type="file" id="imageUpload" accept="image/*">
+  <br><br>
+
+  <img id="previewImage" width="250" style="display:none; border-radius:8px;" />
+
+  <br><br>
+
+  <button onclick="predictImage()">Predict Image</button>
+
+  <p id="imageResult">Prediction will appear here</p>
+</section>
