@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Training Data Interactive Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js for charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- D3.js for word cloud -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Training Data Interactive Demo</h1>
+    <p>Fully interactive demo showing sentiment analysis with confidence, AI training, dataset quality charts, numeric/image predictions, and live word clouds!</p>
+  </header>
+
+  <!-- Your demo sections go here -->
+  <section id="sentiment-demo">
+    <h2>Sentiment Analyzer</h2>
+    <input type="text" id="userInput" placeholder="Type a sentence...">
+    <button onclick="predictSentiment()">Check Sentiment</button>
+    <h3>Example Sentences:</h3>
+    <button onclick="document.getElementById('userInput').value='I love this product!'; predictSentiment();">I love this product!</button>
+    <button onclick="document.getElementById('userInput').value='This is terrible and awful.'; predictSentiment();">This is terrible and awful.</button>
+    <button onclick="document.getElementById('userInput').value='The product is okay.'; predictSentiment();">The product is okay.</button>
+    <p id="result">Prediction will appear here</p>
+    <div id="wordCloud"></div>
+  </section>
+
+  <!-- Other sections like Train AI, Data Quality, Before/After, Numeric, Image labeling go here -->
+
+  <script src="script.js"></script>
+</body>
+</html>
 
